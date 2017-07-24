@@ -16,7 +16,6 @@ public class StreaImpl implements Stream {
 		this.indice = 0;
 	}
 
-	@Override
 	public char getNext() {
 		String letra = processar();
 		char response = letra.length() == 1 ? letra.charAt(0) : 0;
@@ -24,7 +23,6 @@ public class StreaImpl implements Stream {
 		return response;
 	}
 
-	@Override
 	public boolean hasNext() {
 		if ((indice + 1) >= array.length || array[indice] == null)
 			return false;
